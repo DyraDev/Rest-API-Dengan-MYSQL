@@ -25,22 +25,22 @@ Repositori ini berisi REST API sederhana yang dibangun dengan Node.js dan MySQL.
    ```bash
    CREATE DATABASE testdb;
 
-USE testdb;
+   USE testdb;
 
-CREATE TABLE users (
+   CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     email VARCHAR(100)
-);
+   );
    ```
 4. **Perbarui detail koneksi MySQL di 'server.js'**:
    ```bash
    const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'your_mysql_username', // ganti dengan username MySQL Anda
-  password: 'your_mysql_password', // ganti dengan password MySQL Anda
-  database: 'testdb'
-});
+   host: 'localhost',
+   user: 'your_mysql_username', // ganti dengan username MySQL Anda
+   password: 'your_mysql_password', // ganti dengan password MySQL Anda
+   database: 'testdb'
+   });
    ```
 
 ## Menjalankan Server Secara Lokal
@@ -58,13 +58,13 @@ Server akan berjalan di **http://localhost:3000**.
 - **Request**: `GET /api/users`
 - **Response**:
     ```json
-[
+    [
     {
         "id": 1,
         "name": "John Doe",
         "email": "john@example.com"
     },
-]
+    ]
     ```
 
 ### GET /api/users/:id
@@ -73,11 +73,11 @@ Server akan berjalan di **http://localhost:3000**.
 - **Request**: `GET /api/users/:id`
 - **Response**:
     ```json
-{
+    {
     "id": 1,
     "name": "John Doe",
     "email": "john@example.com"
-}
+    }
     ```
 
 ### POST /api/users
@@ -87,18 +87,18 @@ Server akan berjalan di **http://localhost:3000**.
     - Headers: `Content-Type: application/json`
     - Body:
         ```json
-{
-    "name": "Jane Doe",
-    "email": "jane@example.com"
-}
+        {
+          "name": "Jane Doe",
+          "email": "jane@example.com"
+        }
         ```
 - **Response**:
     ```json
-{
+    {
     "id": 2,
     "name": "Jane Doe",
     "email": "jane@example.com"
-}
+    }
     ```
 
 ### DELETE /api/users/:id
@@ -107,9 +107,9 @@ Server akan berjalan di **http://localhost:3000**.
 - **Request**: `DELETE /api/users/:id`
 - **Response**:
     ```json
-{
+    {
     "affectedRows": 1
-}
+    }
     ```
 
 ### PUT /api/users/:id
