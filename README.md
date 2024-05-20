@@ -119,16 +119,16 @@ Server akan berjalan di **http://localhost:3000**.
     - Headers: `Content-Type: application/json`
     - Body:
         ```json
-{
-    "name": "Jane Smith",
-    "email": "jane.smith@example.com"
-}
+        {
+          "name": "Jane Smith",
+          "email": "jane.smith@example.com"
+        }
         ```
 - **Response**:
     ```json
-{
+    {
     "affectedRows": 1
-}
+    }
     ```
 
 ## Menguji API
@@ -150,7 +150,8 @@ Server akan berjalan di **http://localhost:3000**.
     - Body:
         ```json
         {
-          "name": "User 3"
+          "name": "User 3",
+          "email": "user3@example.com"
         }
         ```
 
@@ -165,7 +166,8 @@ Server akan berjalan di **http://localhost:3000**.
     - Body:
         ```json
         {
-          "name": "User 3 Updated"
+          "name": "User 3 Updated",
+          "email": "user3@example.com"
         }
         ```
 
@@ -180,7 +182,7 @@ Server akan berjalan di **http://localhost:3000**.
     ```bash
     curl -X POST http://localhost:3000/api/users \
     -H "Content-Type: application/json" \
-    -d '{"name": "User 3"}'
+    -d '{"name": "User 3", "email": "user3@example.com"}'
     ```
 
 3. **GET Users Berdasarkan ID**:
@@ -197,7 +199,7 @@ Server akan berjalan di **http://localhost:3000**.
     ```bash
     curl -X PUT http://localhost:3000/api/users/1 \
     -H "Content-Type: application/json" \
-    -d '{"name": "User 3 Updated"}'
+    -d '{"name": "User 3 Updated", "email": "user3@example.com"}'
     ```
 
 ## Lisensi
